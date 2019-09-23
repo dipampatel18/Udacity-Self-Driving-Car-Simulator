@@ -1,7 +1,9 @@
 # Udacity-Self-Driving-Car
 Training Udacity's Self-driving Car using the Unity Simulator
 
-  <img width="720" height="400" src="/files/Final_Run.gif">
+<p align="center">
+  <img width="720" height="400" src="/src/files/Final_Run.gif">
+</p>
 
 ### Getting Started
 
