@@ -1,6 +1,10 @@
 # Udacity-Self-Driving-Car
 Training Udacity's Self-driving Car using the Unity Simulator
 
+<p align="center">
+  <img width="720" height="400" src="/files/Final_Run.gif">
+</p>
+
 ### Getting Started
 
 Clone the repository to your local directory
@@ -37,7 +41,7 @@ Running the application
 
 Begin training using the following command
 
-```python3 model.py```
+```python3 train.py```
 
 ## Testing
 
@@ -45,15 +49,30 @@ The trained model has its weights saved in the model.h5 file which can be direct
 
 Now, just like before, launch the simulation. Only this time, select the Autonomous Mode and then run the following command to start the testing of our trained model.
 
-```python3 drive.py model.h5```
+```python3 test.py model.h5```
+
+## Saving Test Run
+
+In order to save the FPV frames of the agent and later convert it to a video, run the following command with the desired name of the folder-
+
+```python3 test.py test_run```
+
+To convert those frames into a video, run the following command-
+
+```python3 video.py test_run``` 
+
+This will save a video in the current directory with the name- test_run.mp4 at 60 fps. To change the fps, feed the above command with an argment-
+
+```python3 video.py test_run --fps 30``` 
+
 
 ### References
 
 
-https://github.com/llSourcell/How_to_simulate_a_self_driving_car
+- [Udacity Self-Driving Car](https://github.com/udacity/CarND-Behavioral-Cloning-P3)
 
-https://github.com/udacity/CarND-Behavioral-Cloning-P3
+- [Udacity Self-Driving Car Simulator](https://github.com/udacity/self-driving-car-sim)
 
-https://github.com/udacity/self-driving-car-sim
+- [Tutorial - Siraj Raval](https://github.com/llSourcell/How_to_simulate_a_self_driving_car)
 
-https://github.com/naokishibuya/car-behavioral-cloning
+- [Tutorial - Naoki Shibuya](https://github.com/naokishibuya/car-behavioral-cloning)
