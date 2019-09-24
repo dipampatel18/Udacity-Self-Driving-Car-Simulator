@@ -1,6 +1,4 @@
 import os
-# os.chdir("/content/drive/My Drive/Udacity-Self-Driving-Car/src")
-
 import pandas as pd # data analysis toolkit - create, read, update, delete datasets
 import numpy as np #matrix math
 from sklearn.model_selection import train_test_split #to split out training and testing data 
@@ -17,13 +15,6 @@ from keras.layers import Lambda, Conv2D, MaxPooling2D, Dropout, Dense, Flatten
 from utils import INPUT_SHAPE, batch_generator
 from keras_preprocessing import image
 from keras_preprocessing.image import ImageDataGenerator
-
-#for command line arguments
-# import argparse
-#for reading files
-# import os
-# import tensorflow as tf
-# from utils import *
 
 #for debugging, allows for reproducible (deterministic) results 
 np.random.seed(0)
@@ -78,20 +69,11 @@ def build_model():
     Conv2D(48, (5,5), activation='relu', strides=(2, 2)),
     Conv2D(64, (3,3), activation='relu', strides=(1, 1)),
     Conv2D(64, (3,3), activation='relu', strides=(1, 1)),
-#    tf.keras.layers.MaxPooling2D(2, 2),
-    # The second convolution
-#    tf.keras.layers.Conv2D(64, (3,3), activation='relu'),
-#    tf.keras.layers.MaxPooling2D(2,2),
-    # The third convolution
-#    tf.keras.layers.Conv2D(128, (3,3), activation='relu'),
-#    tf.keras.layers.MaxPooling2D(2,2),
-    # The fourth convolution
-#    tf.keras.layers.Conv2D(128, (3,3), activation='relu'),
-#    tf.keras.layers.MaxPooling2D(2,2),
+
     # Flatten the results to feed into a DNN
     Dropout(0.5),
     Flatten(),
-    # 512 neuron hidden layer
+    # 100 neuron hidden layer
     Dense(100, activation='relu'),
     Dense(50, activation='relu'),
     Dense(10, activation='relu'),
@@ -120,9 +102,7 @@ def train_model(model, X_train, X_valid, y_train, y_valid, validation_steps=None
                                  save_best_only=False,
                                  mode='auto')
     
-#     model_save_name = 'model.h5'
-#     path = "/content/drive/My Drive/Udacity-Self-Driving-Car/src/{model_save_name}" 
-#     torch.save(model.state_dict(), path)
+
     #calculate the difference between expected steering angle and actual steering angle
     #square the difference
     #add up all those differences for as many data points as we have

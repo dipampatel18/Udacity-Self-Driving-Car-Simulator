@@ -34,18 +34,20 @@ Running the application
 
 - The simulator will start running
 - Select the desired scene and start the training mode
-- Press 'r' to start the recording and navigate to the ```Udacity-Self-Driving-Car/src/data``` folder
-- Press 'r' again and start driving the car around
+- Press **r** to start the recording and navigate to the **Udacity-Self-Driving-Car/src/data** folder
+- Press **r** again and start driving the car around
 - The simulator is continuously recording center, left and right images, along with the steering angle, speed, throttle and brake
-- All the collected data will be stored in the data folder with the images in IMG folder and the data in driving_log.csv format
+- All the collected data will be stored in the data folder with the images in **IMG** folder and the data in **driving_log.csv** format
 
 Begin training using the following command
 
 ```python3 train.py```
 
+After every epoch, the trained model would be saved in the same directory in the format **model-00#.h5**. Rename the latest (or preferable) model as **model.h5** for ease of use.
+
 ## Testing
 
-The trained model has its weights saved in the model.h5 file which can be directly loaded during the testing phase
+The trained model has its weights saved in the **model.h5** file which can be directly loaded during the testing phase
 
 Now, just like before, launch the simulation. Only this time, select the Autonomous Mode and then run the following command to start the testing of our trained model.
 
@@ -55,13 +57,13 @@ Now, just like before, launch the simulation. Only this time, select the Autonom
 
 In order to save the FPV frames of the agent and later convert it to a video, run the following command with the desired name of the folder-
 
-```python3 test.py test_run```
+```python3 test.py model.h5 test_run```
 
 To convert those frames into a video, run the following command-
 
 ```python3 video.py test_run``` 
 
-This will save a video in the current directory with the name- test_run.mp4 at 60 fps. To change the fps, feed the above command with an argment-
+This will save a video in the current directory with the name **test_run.mp4** at 60 fps. To change the fps, feed the above command with an argment-
 
 ```python3 video.py test_run --fps 30``` 
 

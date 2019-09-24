@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Plotting the Graph of Training and Validation Loss for all the Epochs
+# Plotting the Graph of Training - Validation Loss & Accuracy for all the Epochs
 
 # Importing Library
 import matplotlib.pyplot as plt
@@ -12,6 +12,7 @@ y_train_acc = [0.3331, 0.3290, 0.3166, 0.3187, 0.3224, 0.3317, 0.3292, 0.3336, 0
 y_val_loss = [0.0221, 0.0190, 0.0236, 0.0178, 0.0217, 0.0167, 0.0214, 0.0194, 0.0210, 0.0245]
 y_val_acc = [0.7800, 0.8150, 0.7950, 0.7950, 0.8137, 0.8087, 0.7963, 0.8213, 0.8050, 0.7925]
 
+# Plotting 
 plt.plot(x_epoch, y_train_loss, label='Training Loss')
 plt.plot(x_epoch, y_train_acc, label='Training Accuracy')
 plt.plot(x_epoch, y_val_loss, label='Validation Loss')
