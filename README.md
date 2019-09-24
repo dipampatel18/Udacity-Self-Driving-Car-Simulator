@@ -43,6 +43,8 @@ Begin training using the following command
 
 ```python3 train.py```
 
+After every epoch, the trained model would be saved in the same directory in the format model-00#.h5. Rename the latest (or preferable) model as model.h5 for ease of use.
+
 ## Testing
 
 The trained model has its weights saved in the model.h5 file which can be directly loaded during the testing phase
@@ -55,7 +57,7 @@ Now, just like before, launch the simulation. Only this time, select the Autonom
 
 In order to save the FPV frames of the agent and later convert it to a video, run the following command with the desired name of the folder-
 
-```python3 test.py test_run```
+```python3 test.py model.h5 test_run```
 
 To convert those frames into a video, run the following command-
 
