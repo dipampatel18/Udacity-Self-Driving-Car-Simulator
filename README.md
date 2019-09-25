@@ -1,5 +1,5 @@
 # Udacity-Self-Driving-Car
-Training Udacity's Self-driving Car using the Unity Simulator
+CNN based Behavioral Cloning of Self-driving Car in Udacity’s Unity Simulation. Trained the model using the Keras API.
 
 <p align="center">
   <img width="720" height="400" src="/src/files/Final_Run.gif">
