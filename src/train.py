@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import os
 import pandas as pd # data analysis toolkit - create, read, update, delete datasets
 import numpy as np #matrix math
