@@ -14,6 +14,6 @@ seaborn
 pandas
 imageio
 moviepy
-tensorflow-gpu==1.15.0
+tensorflow-gpu==1.15.2
 keras==1.2
 
